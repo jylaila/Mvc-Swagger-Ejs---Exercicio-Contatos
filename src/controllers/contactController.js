@@ -16,7 +16,7 @@ exports.delete = ((req, resp) => {
 })
 
 exports.getQty = ((req, resp) => {
-    var result = contact.getQty()
+    var result = contact.Count()
     resp.send(result)
 })
 
