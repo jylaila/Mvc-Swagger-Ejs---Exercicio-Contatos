@@ -11,8 +11,10 @@ exports.get = ((req, resp) => {
 })
 
 exports.delete = ((req, resp) => {
-    var result = contact.Delete(req.body.email)
-    resp.send(result)
+    let {id} = req.params;
+    contact.Delete(id)
+    let result = contact.GetAll()
+    resp.render("contactList",{ contacts: result })
 })
 
 exports.getQty = ((req, resp) => {
