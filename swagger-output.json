@@ -44,26 +44,24 @@
             }
           }
         }
-      },
-      "delete": {
+      }
+    },
+    "/delete/{id}": {
+      "get": {
         "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "email": {
-                    "example": "any"
-                  }
-                }
-              }
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
@@ -82,8 +80,8 @@
       "get": {
         "description": "",
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
           }
         }
       }
